@@ -1,25 +1,44 @@
 {
   "name": "erp-boilerplate-2",
   "version": "0.1.0",
-  "private": true,
+  "main": "public/electron.js",
+  "description": "Electron React Boilerplate",
+  "author": "Daniel A. Magües",
+  "build": {
+    "appId": "electron.react.boilerplate",
+    "linux": {
+      "category": "Utility",
+      "icon": "build/icon/png/256.png"
+    },
+    "mac": {
+      "category": "Utility"
+    },
+    "win": {
+      "icon": "build/icon/win/app.ico"
+    }
+  },
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
+    "cross-env": "^7.0.2",
+    "electron-is-dev": "^1.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "build": "npm run react-build && npm run electron-build",
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +54,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@types/typescript": "^2.0.0",
+    "concurrently": "^5.2.0",
+    "electron": "^9.0.0",
+    "electron-builder": "^22.6.1",
+    "wait-on": "^5.0.0"
   }
 }
