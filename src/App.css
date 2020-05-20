@@ -2,8 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.App-logo {  
   pointer-events: none;
 }
 
@@ -15,7 +14,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 90vmin;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +36,7 @@
   }
 }
 
-.about {
+.content {
   margin-top: 10%;
   display: flex;
   flex-direction: column;
@@ -45,3 +44,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
+

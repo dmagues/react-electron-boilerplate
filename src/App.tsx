@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom"
-import logo from './logo.svg';
+import logo from './images/neuralium.png';
 import './App.css';
 
 class Home extends Component {
@@ -8,19 +8,8 @@ class Home extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <Link className="App-link" to="/about">Link to the About Page</Link>
+          <img src={logo} className="App-logo" alt="logo" height="150px" width="150px" />
+          <Link className="App-link" to="/content">Neuralium puzzles</Link>
         </header>
       </div>
     );

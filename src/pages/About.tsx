@@ -5,7 +5,7 @@ import "../App.css"
 
 const About = () => {
     return (
-        <div className="about">
+        <div className="content">
             <p>Welcome to the About Page</p>
             <Link className ="App-link" to= "/">Link to Home</Link>
             <img className="about-img" width="275" src={Logo} alt=""/>
